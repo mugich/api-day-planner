@@ -1,6 +1,6 @@
-var hours = ["13", "14", "15", "16", "17", "18", "19", "20", "21"];
+var hours = ["13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"];
 var date = moment().format("MMMM Do YYYY, h:mm:ss a");
-var currentTime = moment().hours('H');
+var currentTime = moment().hours();
 
 $("#currentDay").append(date);
 
@@ -16,8 +16,6 @@ for (i = 0; i < hours.length; i++) {
 
   var textArea = $("<textarea>");
   textArea.addClass("col-10");
-  textArea.text();
-  textArea.attr("id", hours[i]);
   row.append(textArea);
 
   var button = $("<button>");
@@ -25,20 +23,6 @@ for (i = 0; i < hours.length; i++) {
   row.append(button);
 
   $(".container").append(row);
-}
-
-localStorageFunction();
-
-function localStorageFunction() {
-  $("textarea")[0].value = localStorage.getItem("textarea1");
-  $("textarea")[1].value = localStorage.getItem("textarea2");
-  $("textarea")[2].value = localStorage.getItem("textarea3");
-  $("textarea")[3].value = localStorage.getItem("textarea4");
-  $("textarea")[4].value = localStorage.getItem("textarea5");
-  $("textarea")[5].value = localStorage.getItem("textarea6");
-  $("textarea")[6].value = localStorage.getItem("textarea7");
-  $("textarea")[7].value = localStorage.getItem("textarea8");
-  $("textarea")[8].value = localStorage.getItem("textarea9");
 }
 
 $("button").on("click", function (event) {
@@ -64,38 +48,35 @@ $("button").on("click", function (event) {
   localStorage.setItem("textarea9", textArea9);
 });
 
-// function hourUpdater() {
-  
-//   $(".time-block").each(function () {
-//     var blockHour = parseInt($(this).attr("data-row").split(" ")[0]);
-
-//     if (blockHour < currentTime) {
-//       $(this).addClass("past");
-//     } else if (blockHour === currentTime) {
-//       $(this).removeClass("past");
-//       $(this).addClass("present");
-//     } else {
-//       $(this).removeClass("past");
-//       $(this).removeClass("present");
-//       $(this).addClass("future");
-//     }
-//   });
-// }
-
-// hourUpdater();
-
-function updateTime(){
-
-  for( var i = 0; i < hours.length; i++){
-    if (parseInt(hours[i]) > currentTime){
-      textArea.addClass("past")
-    } else if (parseInt(hours[i]) < currentTime){
-      textArea.addClass("past");
-    } else if (parseInt(hours[i]) == currentTime){
-      textArea.addClass("present");
-    }
-  }
-
+function localStorageFunction() {
+  $("textarea")[0].value = localStorage.getItem("textarea1");
+  $("textarea")[1].value = localStorage.getItem("textarea2");
+  $("textarea")[2].value = localStorage.getItem("textarea3");
+  $("textarea")[3].value = localStorage.getItem("textarea4");
+  $("textarea")[4].value = localStorage.getItem("textarea5");
+  $("textarea")[5].value = localStorage.getItem("textarea6");
+  $("textarea")[6].value = localStorage.getItem("textarea7");
+  $("textarea")[7].value = localStorage.getItem("textarea8");
+  $("textarea")[8].value = localStorage.getItem("textarea9");
 }
 
- updateTime();
+function updateTime() {
+  
+  $(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("data-row").split(" ")[0]);
+
+    if (blockHour < currentTime) {
+      $(this).addClass("past");
+    } else if (blockHour === currentTime) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+    } else {
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).addClass("future");
+    }
+  });
+}
+
+updateTime();
+localStorageFunction();

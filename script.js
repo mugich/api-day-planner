@@ -1,4 +1,4 @@
-var hours = ["13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"];
+var hours = ["15", "16", "17", "18", "19", "20", "21", "22", "23"];
 var date = moment().format("MMMM Do YYYY, h:mm:ss a");
 var currentTime = moment().hours();
 
@@ -61,7 +61,6 @@ function localStorageFunction() {
 }
 
 function updateTime() {
-  
   $(".time-block").each(function () {
     var blockHour = parseInt($(this).attr("data-row").split(" ")[0]);
 

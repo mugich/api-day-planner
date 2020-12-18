@@ -1,30 +1,32 @@
 # api-day-planner
 
-# 05 Third-Party APIs: Work Day Scheduler
+## Project Description "Work Day Scheduler!"
 
-## Your Task
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
+This simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This work day scheduler uses [Moment.js] library to work with dates and times.
 
 
+**Technologies used:** 
+* HTML
+* CSS
+* moment.js
+* jQuery
+* Javascript
+* API-DOM
+* Bootstrap
 
+### Research Link
 
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
+* [Google](https://www.google.com)
+* [w3school.com](https://www.w3schools.com/html/html5_semantic_elements.asp)
+* [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+* [stackoverflow.com/](https://stackoverflow.com//)
 
+### Application links
 
+* [deployed application](https://mugich.github.io/api-day-planner/)
 
+* [GitHub repositories](https://github.com/mugich/api-day-planner)
+
+### Application's appearance
+![screenshot](./assets/images/day-planner.png)
